@@ -12,20 +12,20 @@ struct ContentView: View {
     @State private var image = "peacesign"
     var body: some View {
         VStack{
-            Text("Hey this is a small game")
+            Text("This is a small game")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundStyle(.blue)
             
             Spacer()
-
+            
             
             Image(systemName: image)
                 .resizable()
                 .scaledToFit()
                 .foregroundStyle(.orange)
-                .frame(width: 350, height: 350)
-       
+                .frame(width: 300, height: 300)
+            
             
             Text(textMessage)
                 .font(.largeTitle)
@@ -51,8 +51,8 @@ struct ContentView: View {
                 textMessage = "I Want Peace"
                 image = "peacesign"
             }
-
-
+            
+            
             
         }
         .buttonStyle(.borderedProminent)
