@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @State private var message = ""
     @State private var imageString = ""
+    @State private var imageNumber = 0
     
     var body: some View {
         
@@ -37,9 +38,17 @@ struct ContentView: View {
                 
                 message = (message == message1 ? message2 : message1)
                 imageString = (imageString == imageString1 ? imageString2 : imageString1)
+                
+                imageString = "image\(imageNumber)"
+                imageNumber += 1
+                
+                if imageNumber > 9 {
+                    imageNumber = 0
+                }
+                
+
             }
-            
-            
+
             .buttonStyle(.borderedProminent)
             .font(.title2)
         }
