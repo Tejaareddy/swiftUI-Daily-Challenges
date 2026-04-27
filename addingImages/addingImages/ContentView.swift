@@ -46,9 +46,9 @@ struct ContentView: View {
                     imageNumber = 0
                 }
                 
-
+            
             }
-
+            
             .buttonStyle(.borderedProminent)
             .font(.title2)
         }
